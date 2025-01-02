@@ -1,22 +1,23 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "nikosid/tipranks",
+    "description": "TipRanks API integration for Laravel",
     "keywords": [
-        ":vendor_name",
+        "nikosid",
         "laravel",
-        ":package_slug"
+        "tipranks"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/nikosid/tipranks",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Yurii Chernichenko",
+            "email": "nikosid@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.4",
+        "guzzlehttp/guzzle": "^7.0",
         "spatie/laravel-package-tools": "^1.16",
         "illuminate/contracts": "^10.0||^11.0"
     },
@@ -30,18 +31,17 @@
         "pestphp/pest-plugin-laravel": "^3.0",
         "phpstan/extension-installer": "^1.3",
         "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3",
-        "spatie/laravel-ray": "^1.35"
+        "phpstan/phpstan-phpunit": "^1.3"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Nikosid\\Tipranks\\": "src/",
+            "Nikosid\\Tipranks\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Nikosid\\Tipranks\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Nikosid\\Tipranks\\TipranksServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Tipranks": "Nikosid\\Tipranks\\Facades\\Tipranks"
             }
         }
     },

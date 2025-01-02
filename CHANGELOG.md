@@ -1,3 +1,3 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file.
+All notable changes to `tipranks` will be documented in this file.
