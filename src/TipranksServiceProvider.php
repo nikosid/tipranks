@@ -2,7 +2,6 @@
 
 namespace Nikosid\Tipranks;
 
-use Nikosid\Tipranks\Commands\TipranksCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,10 +16,7 @@ class TipranksServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('tipranks')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_tipranks_table')
-            ->hasCommand(TipranksCommand::class);
+            ->hasConfigFile();
     }
 
     public function packageRegistered(): void
