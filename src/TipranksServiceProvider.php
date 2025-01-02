@@ -21,7 +21,7 @@ class TipranksServiceProvider extends PackageServiceProvider
 
     public function packageRegistered(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/tipranks.php', 'tipranks');
+        $this->mergeConfigFrom(__DIR__.'/../config/tipranks.php', 'tipranks');
 
         $this->app->singleton(Tipranks::class, function ($app) {
             $email = $app['config']->get('tipranks.email');
